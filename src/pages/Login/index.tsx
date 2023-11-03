@@ -20,7 +20,7 @@ function Login() {
   useEffect(handleValidation, [name]);
 
   return (
-    <div className="relative flex flex-col items-center justify-center gap-10 m-auto w-fit">
+    <div className="relative flex flex-col items-center justify-center gap-10 mx-auto pt-[8rem] w-fit">
       <div className="flex flex-col items-center justify-center gap-0">
         <img
           className="w-[10rem]"

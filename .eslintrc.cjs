@@ -27,5 +27,6 @@ module.exports = {
     ],
     'react/react-in-jsx-scope': 'off',
     'no-param-reassign': 'off',
+    'no-void': 'off',
   },
 }

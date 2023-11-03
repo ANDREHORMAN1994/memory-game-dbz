@@ -1,13 +1,19 @@
 import {
   useContext, useEffect, useState,
 } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { Context } from '../../context/Provider';
 import { ICard, data } from '../../utils/data';
 import Card from '../../components/Card';
 
+let idIntervel = 0;
+
 function Game() {
   const [cards, setCards] = useState<ICard[]>([]);
+  const [count, setCount] = useState<number>(0);
   const { name } = useContext(Context);
+  const navigate = useNavigate();
 
   const changeAttrCard = (
     cardTarget: ICard,
@@ -28,8 +34,32 @@ function Game() {
   };
 
   useEffect(() => {
+    if (cards.length > 0 && cards.every((c) => c.grayScale)) {
+      clearInterval(idIntervel);
+      void Swal.fire(
+        {
+          icon: 'success',
+          title: 'Parabéns!!',
+          text: `Seu tempo foi de ${count} segundos`,
+          confirmButtonText: 'Jogar novamente',
+        },
+      )
+        .then((result) => {
+          if (result.isConfirmed) {
+            setCount(0);
+            setCards(data.sort(() => Math.random() - 0.5));
+            navigate('/');
+          }
+        });
+    }
+  }, [cards, count, navigate]);
+
+  useEffect(() => {
     const shuffledData = data.sort(() => Math.random() - 0.5);
     setCards(shuffledData);
+    idIntervel = setInterval(() => {
+      setCount((prevCount) => prevCount + 1);
+    }, 1000);
   }, []);
 
   return (
@@ -39,8 +69,8 @@ function Game() {
           <h1 className="text-[3rem] font-title text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             {name}
           </h1>
-          <h1 className="text-[3rem] font-title text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            Tempo: 10
+          <h1 className="text-[3rem] min-w-[17rem] text-left font-title text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            {`Tempo: ${count}`}
           </h1>
         </div>
 

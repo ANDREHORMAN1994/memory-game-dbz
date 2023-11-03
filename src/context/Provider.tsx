@@ -18,7 +18,7 @@ export const Context = createContext<IContext>({
 });
 
 export function Provider({ children }: React.PropsWithChildren): ReactElement {
-  const [name, setName] = useState('André Horman');
+  const [name, setName] = useState('');
   const [cardsSelected, setCardsSelected] = useState<ICard[]>([]);
 
   const contextValue = useMemo(() => ({
