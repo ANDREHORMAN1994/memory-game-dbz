@@ -49,12 +49,14 @@ function Login() {
           Play
         </button>
       </form>
-      <img
-        className={`lg:absolute -bottom-5 -right-52 w-48 lg:w-52 h-auto z-[999]
-        ${disabled ? 'grayscale' : 'grayscale-0'}`}
-        src="/images/dragon-ball.png"
-        alt="Imagem da esfera do dragão de 4 estrelas"
-      />
+      <button type="button" disabled={disabled} onClick={() => navigate('/game')}>
+        <img
+          className={`lg:absolute -bottom-5 -right-52 w-48 lg:w-52 h-auto z-[999]
+          ${disabled ? 'grayscale hover:cursor-not-allowed' : 'grayscale-0 hover:scale-110 transition-all duration-500 ease-in-out'}`}
+          src="/images/dragon-ball.png"
+          alt="Imagem da esfera do dragão de 4 estrelas"
+        />
+      </button>
     </div>
   );
 }
