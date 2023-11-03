@@ -5,18 +5,19 @@ import Login from './pages/Login';
 import Game from './pages/Game';
 import { Provider } from './context/Provider';
 import './index.css';
+import NotFound from './pages/NotFound';
 
 const router = createBrowserRouter([{
   path: '/',
   element: <App />,
-  errorElement: <h1>DEU RUIM</h1>,
+  errorElement: <NotFound />,
   children: [
     {
       index: true,
       element: <Login />,
     },
     {
-      path: 'game',
+      path: '/game',
       element: <Game />,
     },
   ],
