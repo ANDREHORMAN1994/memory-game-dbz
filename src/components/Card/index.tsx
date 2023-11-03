@@ -52,7 +52,7 @@ function Card({ card, changeAttrCard }: ICardProps) {
         onClick={() => handleUpdateCard(card)}
       >
         <img
-          className="w-[8rem] h-auto hover:cursor-pointer hover:scale-105 transition-all duration-500 ease-in-out"
+          className="min-w-[9rem] lg:min-w-[8rem] w-[9rem] lg:w-[8rem] h-auto hover:cursor-pointer lg:hover:scale-105 transition-all duration-500 ease-in-out"
           src="/images/card.png"
           alt="Imagem do verso do card"
         />
@@ -63,7 +63,7 @@ function Card({ card, changeAttrCard }: ICardProps) {
         disabled={isFlipped}
       >
         <img
-          className={`w-[8rem] h-auto hover:cursor-not-allowed hover:scale-105 ${card.grayScale ? 'grayscale' : 'grayscale-0'} transition-all duration-500 ease-in-out`}
+          className={`min-w-[9rem] lg:min-w-[8rem] w-[9rem] lg:w-[8rem] h-auto hover:cursor-not-allowed lg:hover:scale-105 ${card.grayScale ? 'grayscale' : 'grayscale-0'} transition-all duration-500 ease-in-out`}
           src={card.url}
           alt="Imagem da frente do card"
         />
