@@ -14,6 +14,10 @@ export default {
         'text-button': '#FF6D00',
         'text-placeholder': '#898989',
         'border-color': '#FF6D00',
+      },
+      fontFamily: {
+        'normal': ['Roboto', 'sans-serif'],
+        'title': ['Kavoon', 'serif'],
       }
     },
   },
