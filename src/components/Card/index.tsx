@@ -21,7 +21,9 @@ function Card({ card, changeAttrCard }: ICardProps) {
   const handleUpdateCard = (cardTarget: ICard) => {
     setIsFlipped(true);
     changeAttrCard(cardTarget, { showCard: true });
-    setCardsSelected([...cardsSelected, { ...cardTarget, showCard: true }]);
+    if (!cardsSelected.some((c) => c.id === cardTarget.id)) {
+      setCardsSelected([...cardsSelected, { ...cardTarget, showCard: true }]);
+    }
   };
 
   useEffect(() => {
