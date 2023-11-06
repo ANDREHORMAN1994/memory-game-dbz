@@ -1,27 +1,48 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  <p><img alt="Esfera do Dragão" src="./.github/dragon-ball.png" height="100px" /></p>
+  <span>MEMORY GAME DBZ</span>
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="#bookmark-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#paintbrush-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://memory-game-dbz.vercel.app/" target="_blank">Aplicação na Vercel</a>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img alt="design do projeto" width="650px" src="./.github/mockup.png" />
+<p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## :bookmark: Sobre
 
-## Expanding the ESLint configuration
+O **Memory Game DBZ** é uma aplicação Web desenvolvida em ReactJS, que consiste em um jogo da memória com os personagens do anime Dragon Ball Z. A aplicação possui uma tela inicial de Login e uma tela de jogo, onde o usuário deve encontrar os pares de cartas iguais com o menor tempo possível.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Para executar a aplicação, realize os passos a seguir:
 
-- Configure the top-level `parserOptions` property like this:
+* Clone o repositório ou realize um fork para o seu GitHub.
+* Entre no diretório do projeto --> `cd memory-game-dbz`.
+* Instale as dependências do projeto --> `npm install`.
+* Execute a aplicação --> `npm run dev`.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+<br />
+<p align="center">
+  <img alt="preview do projeto" width="650px" src="./.github/memory-game-dbz.gif" />
+<p>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## :rocket: Tecnologias
+
+  - `React JS`
+  > Biblioteca JavaScript para construção de interfaces de usuário.
+  - `TypeScript`
+  > Linguagem de programação que adiciona tipagem estática ao JavaScript.
+  - `Tailwind CSS`
+  > Framework CSS que utiliza a metodologia CSS-in-JS.
+  - `Vercel`
+  > Plataforma de hospedagem voltada para aplicações web modernas e escaláveis.
+
+## :paintbrush: Layout
+
+🔗 [LINK DO FIGMA](https://www.figma.com/file/XTig7FzyzQTBiFgmQ72KLq/Memory-Game-DBZ?type=design&node-id=0%3A1&mode=dev)
+
+---
